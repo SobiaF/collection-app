@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: collection_app
-# Generation Time: 2021-03-29 12:40:01 +0000
+# Generation Time: 2021-03-29 13:54:57 +0000
 # ************************************************************
 
 
@@ -29,14 +29,14 @@ DROP TABLE IF EXISTS `Kdramas`;
 CREATE TABLE `Kdramas` (
   `Kdrama` varchar(600) NOT NULL DEFAULT '',
   `ReleaseYear` int(4) NOT NULL,
-  `Synopsis` varchar(1000) NOT NULL DEFAULT '',
-  `Starring` varchar(800) NOT NULL DEFAULT ''
+  `Starring` varchar(800) NOT NULL DEFAULT '',
+  `Synopsis` varchar(1000) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `Kdramas` WRITE;
 /*!40000 ALTER TABLE `Kdramas` DISABLE KEYS */;
 
-INSERT INTO `Kdramas` (`Kdrama`, `ReleaseYear`, `Synopsis`, `Starring`)
+INSERT INTO `Kdramas` (`Kdrama`, `ReleaseYear`, `Starring`, `Synopsis`)
 VALUES
 	('Extraordinary You',2019,'Kim Hye-yoon, Rowoon, Lee Jae-wook, Lee Na-eun, Jung Gun-joo, Kim Young-dae and Lee Tae-ri.','The series follows Eun Dan-oh (Kim Hye-yoon) who is a student at a prestigious academy. One day, by chance, she discovers that the world she lives in is a fantasy world of comics. She and everyone else are merely characters in a comic book entitled Secret,[c] all under the authority of their omnipotent and omniscient Writer. Dan-oh is only an extra character and, worse, the Writer gave her a lame set-up'),
 	('Hotel Del Luna',2019,'Lee Ji-eun and Yeo Jin-goo.','\"Hotel Del Luna\" (previously known as guest house of the moon) is not like any other hotel. A supernatural place, the hotel is not visible in its true form during the daytime as humans can only come across the hotel under special circumstances. Its staff and clients are all souls/ghosts coming to terms with unfinished business in their former lives before they pass on to the afterlife and cycle of reincarnation. Jang Man-wol is the owner of this hotel, which is located in Myeong-dong, Seoul. Due to a huge sin committed a millennium ago, the hotel catering to the dead has been bound to her soul.'),
