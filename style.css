@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=roboto);
+
+html {
+  font-family: "roboto", arial;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  main section {
+	  grid-template-columns: 1fr;  }
+}
