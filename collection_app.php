@@ -10,10 +10,11 @@ $Kdramas = $query->fetchAll();
 
 <html lang="en">
 <head>
-    <title>Kdrama Collection App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+<body>
+<h1>Kdrama Collection App</h1>
 
     <?php
 echo '<ul>';
@@ -22,5 +23,5 @@ foreach ($Kdramas as $Kdrama) {
 }
 echo '</ul>';
 ?>
-
+</body>
 </html>
