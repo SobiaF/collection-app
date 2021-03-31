@@ -1,8 +1,6 @@
 <?php
 require_once "functions.php";
 
-var_dump($_POST);
-
 if (
     isset($_POST['Kdrama']) &&
     isset($_POST['ReleaseYear']) &&
@@ -23,4 +21,6 @@ if (
     $query->bindParam('Synopsis', $Synopsis);
     $query->bindParam('Starring', $Starring);
     $query->execute();
+    header('Location: index.php');
+    exit;
 }
