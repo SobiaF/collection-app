@@ -10,6 +10,7 @@ $Kdramas = getKdramas($db);
     <link rel='stylesheet' href='normalize.css'>
     <link rel='stylesheet' href='style.css'>
 <body>
+<section>
 <h1>Kdrama Collection App</h1>
 
 <form action='add_kdrama.php' method='post'>
@@ -19,6 +20,8 @@ $Kdramas = getKdramas($db);
     <p>Synopsis: <input type='text' name='Synopsis' required></p>
     <input type='submit' value='submit'>
 </form>
+</section>
+
 <?php
 
 echo showKdramas($Kdramas);
