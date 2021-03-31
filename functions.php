@@ -30,7 +30,7 @@ function showKdramas(array $Kdramas) : string
 {
     $KdramaToShow = '<ul>';
     foreach ($Kdramas as $Kdrama) {
-        $KdramaToShow .= '<li>' . $Kdrama['Kdrama'] . ' - ' . $Kdrama['ReleaseYear'] . ' - ' . $Kdrama['Synopsis'] . ' - ' . $Kdrama['Starring'] . '</li>';
+        $KdramaToShow .= '<li>' . $Kdrama['Kdrama'] . ' - ' . $Kdrama['ReleaseYear'] . ' - Synopsis: ' . $Kdrama['Synopsis'] . ' - Starring: ' . $Kdrama['Starring'] . '</li>';
     }
     $KdramaToShow .= '</ul>';
     return $KdramaToShow;
