@@ -1,11 +1,7 @@
 <?php
-
-$db = new PDO('mysql:host=db; dbname=collection_app', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$query = $db->prepare("SELECT `Kdrama`, `ReleaseYear`, `Synopsis`, `Starring` FROM `Kdramas`;");
-$query->execute();
-$Kdramas = $query->fetchAll();
-
+require_once "functions.php";
+$db = getDb();
+$Kdramas = getKdramas($db);
 ?>
 
 <html lang="en">
@@ -16,14 +12,6 @@ $Kdramas = $query->fetchAll();
 <body>
 <h1>Kdrama Collection App</h1>
 
-    <?php
-echo '<ul>';
-foreach ($Kdramas as $Kdrama) {
-    echo '<li>' . $Kdrama['Kdrama'] . ' - ' . $Kdrama['ReleaseYear'] . ' - ' . $Kdrama['Synopsis'] . ' - ' . $Kdrama['Starring'] . '</li>';
-}
-echo '</ul>';
-?>
-
 <form action="add_kdrama.php" method="post">
     <p>Kdrama: <input type="text" name="Kdrama" required></p>
     <p>Release Year: <input type="number" name="ReleaseYear" required></p>
@@ -31,6 +19,15 @@ echo '</ul>';
     <p>Synopsis: <input type="text" name="Synopsis" required></p>
     <input type="submit" value="submit">
 </form>
+<?php
+
+if (isset($_POST['submit'])) {
+    echo $_POST['submit'];
+}
+
+echo showKdramas($Kdramas);
+?>
 
 </body>
 </html>
+
